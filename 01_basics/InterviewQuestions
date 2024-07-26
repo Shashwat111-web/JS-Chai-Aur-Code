@@ -16,3 +16,5 @@ console.log(typeof undefined); // undefined
 
 
 // methods of string  
+
+Date and time operations 
