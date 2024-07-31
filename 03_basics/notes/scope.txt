@@ -1,0 +1,40 @@
+In JavaScript, scope determines the accessibility or visibility of variables. There are three main types of scope: global scope, function scope, and block scope.
+
+1. Global Scope
+Variables declared outside of any function or block are in the global scope. They can be accessed from anywhere in the code.
+var globalVar = "I am global";
+
+function test() {
+    console.log(globalVar); // Accessible
+}
+
+test();
+console.log(globalVar); // Accessible
+
+
+
+
+2. Function Scope
+Variables declared within a function are in the function scope. They can only be accessed within that function.
+function test() {
+    var functionVar = "I am local to the function";
+    console.log(functionVar); // Accessible
+}
+
+test();
+console.log(functionVar); // Uncaught ReferenceError: functionVar is not defined
+
+
+
+
+3. Block Scope
+Variables declared with let or const within a block (e.g., inside {}) are in the block scope. They can only be accessed within that block
+if (true) {
+    let blockVar = "I am block scoped";
+    const blockConst = "I am also block scoped";
+    console.log(blockVar); // Accessible
+    console.log(blockConst); // Accessible
+}
+
+console.log(blockVar); // Uncaught ReferenceError: blockVar is not defined
+console.log(blockConst); // Uncaught ReferenceError: blockConst is not defined
