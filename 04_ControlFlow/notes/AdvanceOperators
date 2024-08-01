@@ -1,0 +1,39 @@
+The nullish coalescing operator (??) in JavaScript is a logical operator that returns the right-hand side operand when the left-hand side operand is null or undefined. Otherwise, it returns the left-hand side operand. This operator is useful for providing default values when dealing with potentially null or undefined variables.
+
+Syntax
+
+let result = value1 ?? value2;
+
+value1: The value to be checked.
+value2: The default value to be used if value1 is null or undefined.
+Example
+
+
+<!-- code  -->
+let user = null;
+let defaultUser = "Guest";
+
+let currentUser = user ?? defaultUser;
+console.log(currentUser); // Outputs: Guest
+
+
+
+In this example:
+
+user is null.
+The nullish coalescing operator checks if user is null or undefined.
+Since user is null, defaultUser ("Guest") is assigned to currentUser.
+Comparison with Logical OR (||)
+The nullish coalescing operator is similar to the logical OR (||) operator but with a key difference: || returns the right-hand side operand if the left-hand side operand is any falsy value (e.g., 0, NaN, "", false, null, undefined), whereas ?? only considers null and undefined.
+
+<!-- Example  -->
+let count = 0;
+
+let result1 = count || 10; // Outputs: 10 (because 0 is falsy)
+let result2 = count ?? 10; // Outputs: 0 (because 0 is not null or undefined)
+
+console.log(result1); // Outputs: 10
+console.log(result2); // Outputs: 0
+
+Summary
+The nullish coalescing operator (??) is a useful tool for handling null or undefined values, providing a more precise alternative to the logical OR (||) operator when dealing with default values.
