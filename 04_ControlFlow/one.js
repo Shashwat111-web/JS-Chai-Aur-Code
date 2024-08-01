@@ -11,7 +11,7 @@ const temperature = 41
 // console.log("Execute");
 // <, >, <=, >=, ==, !=, ===, !==
 
-// const score = 200
+const score = 200
 
 // if (score > 100) {
 //     let power = "fly"
@@ -50,3 +50,6 @@ if (userLoggedIn && debitCard && 2==3) {
 if (loggedInFromGoogle || loggedInFromEmail) {
     console.log("User logged in");
 }
+
+
+

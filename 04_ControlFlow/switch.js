@@ -8,6 +8,9 @@
 //         break;
 // }
 
+
+
+
 const month = "march"
 
 switch (month) {
@@ -23,7 +26,7 @@ switch (month) {
     case "april":
         console.log("april");
         break;
-
+// if break is removed then the next statement is printed without checking the case 
     default:
         console.log("default case match");
         break;
