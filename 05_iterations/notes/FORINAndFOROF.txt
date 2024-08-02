@@ -1,0 +1,79 @@
+In JavaScript, `for...of` and `for...in` loops are used to iterate over different types of collections, but they serve different purposes and work with different kinds of objects.
+
+### `for...of` Loop
+The `for...of` loop is used to iterate over iterable objects such as arrays, strings, maps, sets, and more. It iterates over the values of the iterable object.
+
+#### Syntax
+
+```javascript
+for (const element of iterable) {
+    // Code to be executed for each element
+}
+```
+
+#### Example
+```javascript
+const array = [1, 2, 3, 4, 5];
+
+for (const value of array) {
+    console.log(value); // Outputs: 1, 2, 3, 4, 5
+}
+```
+
+### `for...in` Loop
+The `for...in` loop is used to iterate over the enumerable properties of an object. It iterates over the keys (property names) of the object.
+
+#### Syntax
+```javascript
+for (const key in object) {
+    // Code to be executed for each key
+}
+```
+
+#### Example
+```javascript
+const object = { a: 1, b: 2, c: 3 };
+
+for (const key in object) {
+    console.log
+
+(key
+
+); // Outputs: a, b, c
+    console.log(object[key]); // Outputs: 1, 2, 3
+}
+```
+
+### Key Differences
+1. **Purpose**:
+   - `for...of`: Iterates over the values of an iterable object.
+   - `for...in`: Iterates over the keys (property names) of an object.
+
+2. **Use Cases**:
+   - `for...of`: Best suited for arrays, strings, maps, sets, and other iterable objects.
+   - `for...in`: Best suited for objects to iterate over their properties.
+
+3. **Iteration**:
+   - `for...of`: Directly accesses the values.
+   - `for...in`: Accesses the keys, which can then be used to get the values.
+
+### Example Comparison
+```javascript
+const array = [10, 20, 30];
+const object = { x: 10, y: 20, z: 30 };
+
+// Using for...of with an array
+for (const value of array) {
+    console.log(value); // Outputs: 10, 20, 30
+}
+
+// Using for...in with an object
+for (const key in object) {
+    console.log(key); // Outputs: x, y, z
+    console.log(object[key]); // Outputs: 10, 20, 30
+}
+```
+
+### Summary
+- Use `for...of` to iterate over the values of iterable objects like arrays and strings.
+- Use `for...in` to iterate over the keys of objects.
